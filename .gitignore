@@ -4,6 +4,7 @@
 
 # Session Data files
 .RData
+.Rbuildignore
 
 # Example code in package build process
 *-Ex.R
@@ -34,12 +35,45 @@ vignettes/*.pdf
 .Rproj.user
 
 # The book files
-_book/
-_bookdown_files/
+manuscript/_book/
+manuscript/_bookdown_files/
+# temporary ones
+manuscript/interpretable-ml*
+manuscript/images/*.pdf
+
+# Vim swap files
+*.swp
 
 # LaTeX files
 *.aux
 *.tex
 *.log
 
+xgboost.model
+.DS_Store
+
+# leanpub files
+manuscript/*.md
+manuscript/cache
+
+kindlegen
+manuscript/images/*.png
+
+# From SBRL package usage
+*.out
+*.label
+packrat/lib*/
+
+# Gets build automatically, so ignore for repo
+manuscript/11-references.Rmd
+
+# From Deep Learning scripts
+scripts/dl-feature-attribution/dl/
+scripts/dl-feature-attribution/*.png
+
+.ipynb_checkpoints
+
+
+# vim stuff
+*.swo
 

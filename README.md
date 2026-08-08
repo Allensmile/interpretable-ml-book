@@ -1,57 +1,74 @@
-# Interpretable machine learning
+# Interpretable Machine Learning
 
-Explaining the decisions and behaviour of machine learning models.
+This is the repository for the book Interpretable Machine Learning -- A Guide For Explaining Black Box Models.
 
-[![Build Status](https://travis-ci.org/christophM/interpretable-ml-book.svg?branch=master)](https://travis-ci.org/christophM/interpretable-ml-book)
+![Build Status](https://github.com/christophM/interpretable-ml-book/actions/workflows/Book.yaml/badge.svg)
+
+You can read the book in the following ways:
+
+- [Online, for free](https://christophm.github.io/interpretable-ml-book/)
+- [Buy the ebook](https://leanpub.com/interpretable-machine-learning/)
+- [But the paperback](https://bookgoodies.com/a/3911578032)
 
 ## Summary
-You can find the current version of the book here: https://christophm.github.io/interpretable-ml-book/.
+
+You can find the current version of the book here: https://christophm.github.io/interpretable-ml-book/
 
 This book is about interpretable machine learning. Machine learning is being built into many products and processes of our daily lives, yet decisions made by machines don't automatically come with an explanation. An explanation increases the trust in the decision and in the machine learning model. As the programmer of an algorithm you want to know whether you can trust the learned model. Did it learn generalizable features? Or are there some odd artifacts in the training data which the algorithm picked up? This book will give an overview over techniques that can be used to make black boxes as transparent as possible and explain decisions. In the first chapter algorithms that produce simple, interpretable models are introduced together with instructions how to interpret the output. The later chapters focus on analyzing complex models and their decisions.
 In an ideal future, machines will be able to explain their decisions and make a transition into an algorithmic age more human. This books is recommended for machine learning practitioners, data scientists, statisticians and also for stakeholders deciding on the use of machine learning and intelligent algorithms.
 
+## Changelog  
 
-The book is automatically build from the master branch and pushed to gh-pages by Travis CI.
+See [CHANGELOG.md](CHANGELOG.md) for version history.
+
+# Citing this Book {#cite}
+
+If you found this book useful for your blog post, research article or product, I would be grateful if you would cite this book.
+You can cite the book like this:
+
+
+```
+Molnar, Christoph. *Interpretable Machine Learning: A Guide for Making Black Box Models Explainable*. 3rd ed., 2025. ISBN: 978-3-911578-03-5. Available at: \url{https://christophm.github.io/interpretable-ml-book}.
+```
+
+Or use the following bibtex entry:
+
+```
+@book{molnar2025,
+  title={Interpretable Machine Learning},
+  subtitle={A Guide for Making Black Box Models Explainable},
+  author={Christoph Molnar},
+  year={2025},
+  edition={3},
+  isbn={978-3-911578-03-5},
+  url={https://christophm.github.io/interpretable-ml-book}
+}
+```
+
+I'm always curious about where and how interpretation methods are used in industry and research.
+If you use the book as a reference, it would be great if you wrote me a line and told me what for.
+This is, of course, optional and only serves to satisfy my own curiosity and to stimulate interesting exchanges.
+My email is chris@christophmolnar.com
+
 
 ## Contributing
 
-Any contribution is very welcome.
+If you find any errors in the book, I welcome your help in fixing them! To contribute:
 
-If you find a typo, a better way to formulate a sentence or if you have stylistic improvements, don't hesitate and make a PR!
+1. Fork the repository.
+1. Create a new branch for your fix.
+1. Address the error(s) you found.
+1. Submit a pull request with a clear description of the fix.
 
-If you are interested in a bigger contribution, like writing a chapter or providing examples: that's great! Please open an issue on Github and we can discuss your ideas.
+Additionally, if you have content suggestions or requests, feel free to open an issue. While I can't promise that all suggestions will be added, I appreciate the feedback.
 
-Rules for contributing text or code:
-
-- Make sure each text line only contains one sentence. Exception: for item lists it is one item (with possibly multiple sentences) per line.
-- Fork the repository and open a pull request (PR) for requesting to include the changes. You can use "[WIP]" in the title of the PR, to indicate that you are still working on it
+Thank you for helping improve the book!
 
 
-## Rendering the book
-Make sure all dependencies for the book are installed. This book has the structure of an R package, so dependencies can be installed easily, only R and the devtools library is required:
-```{r}
-devtools::install_github("christophM/interpretable-ml-book")
-```
+# Further Resources:
 
-After you installed the dependencies, you have to clone the repository.
-```{shell}
-git clone git@github.com:christophM/interpretable-ml-book.git
-```
-
-For rendering the book, start an R session and type:
-```{r}
-bookdown::render_book('./', 'bookdown::gitbook')
-```
-
-After rendering, the HTML files of the  book will be in the "_book" folder. You can either double-click index.html directly or, of course, do it in R:
-```{r}
-browseURL('_book/index.html')
- ```
+- Most R examples use the [iml R package](https://github.com/giuseppec/iml) that I developed
+- For a deep dive into SHAP, checkout my book [Interpreting Machine Learning Models with SHAP](https://christophmolnar.com/books/shap/)
 
 
 
-## Changelog
-All notable changes to the book will be documented here.
-
-### v0.1 (2017-12-03)
-- First release of the Interpretable Machine Learning book
